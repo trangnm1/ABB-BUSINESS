@@ -1,4 +1,3 @@
-import { Page, expect } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
 export class LoginPage extends BasePage {
@@ -12,18 +11,13 @@ export class LoginPage extends BasePage {
         await this.usernameInput.fill(username);
 
         await this.passwordInput.fill(password);
-
         await this.loginButton.click();
 
     }
 
     async verifyLoginSuccess() {
-        await this.verifyUrl("http://localhost:4200/home");
+        await this.verifyUrl("/dashboard");
 
     }
-
-
-
-    
 
 }
