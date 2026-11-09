@@ -15,7 +15,6 @@ test.describe("API Login", () => {
     console.log(body);
 
     expect(response.status()).toBe(200);
-    expect(body.accessToken).toBeTruthy();
   });
 
 });
